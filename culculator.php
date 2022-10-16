@@ -2,27 +2,27 @@
 
 class Сalculator
 {
-    private int $result;
-    public function sum(int $sum): self
+    private float $result = 0.0;
+    public function sum(float $sum): self
     {
         $this->result += $sum;
         return $this;
     }
-    public function minus(int $minus): self
+    public function minus(float $minus): self
     {
         $this->result -= $minus;
         return $this;
     }
-    public function product(int $product): self
+    public function product(float $product): self
     {
         $this->result *= $product;
         return $this;
     }
-    public function division(int $division): self
+    public function division(float $division): self
     {
         $this->result /= $division;
-        if ($division == 0) {
-            $this->result == 0;
+        if ($division == 0.0) {
+            $this->result == 0.0;
         }
         return $this;
     }
@@ -36,5 +36,5 @@ $calculator = new Сalculator();
 
 echo $calculator->sum(1)->sum(2)->product(3)->division(3)->getResult();
 echo $calculator->sum(3)->sum(3)->minus(3)->division(3)->getResult();
-echo $calculator->sum(1)->sum(2)->product(4)->getResult();
+echo $calculator->sum(1.6)->sum(2.4)->product(4)->getResult();
 echo $calculator->sum(1)->sum(2)->product(3)->division(0)->getResult();
