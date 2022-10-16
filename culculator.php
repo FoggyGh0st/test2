@@ -2,7 +2,7 @@
 
 class Сalculator
 {
-    public int $result;
+    private int $result;
     public function sum(int $sum): self
     {
         $this->result += $sum;
@@ -26,7 +26,7 @@ class Сalculator
         }
         return $this;
     }
-    public function getResult():string
+    public function getResult(): string
     {
         return $this->result;
     }
