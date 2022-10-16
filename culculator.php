@@ -3,25 +3,25 @@
 class Сalculator
 {
     public int $result;
-    public function sum(int $sum_): self
+    public function sum(int $sum): self
     {
-        $this->result += $sum_;
+        $this->result += $sum;
         return $this;
     }
-    public function minus(int $minus_): self
+    public function minus(int $minus): self
     {
-        $this->result -= $minus_;
+        $this->result -= $minus;
         return $this;
     }
-    public function product(int $product_): self
+    public function product(int $product): self
     {
-        $this->result *= $product_;
+        $this->result *= $product;
         return $this;
     }
-    public function division(int $division_): self
+    public function division(int $division): self
     {
-        $this->result /= $division_;
-        if ($division_ == 0) {
+        $this->result /= $division;
+        if ($division == 0) {
             $this->result == 0;
         }
         return $this;
