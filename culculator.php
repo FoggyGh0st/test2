@@ -1,27 +1,27 @@
 <?php
 
-class calculator
+class Сalculator
 {
     public $result;
-    public function sum($s)
+    public function sum(int $sum)
     {
-        $this->result += $s;
+        $this->result += $sum;
         return $this;
     }
-    public function minus($m)
+    public function minus(int $minus)
     {
-        $this->result -= $m;
+        $this->result -= $minus;
         return $this;
     }
-    public function product($p)
+    public function product(int $product)
     {
-        $this->result *= $p;
+        $this->result *= $product;
         return $this;
     }
-    public function division($d)
+    public function division(int $division)
     {
-        $this->result /= $d;
-        if ($d == 0) {
+        $this->result /= $division;
+        if ($division == 0) {
             $this->result == 0;
         }
         return $this;
@@ -32,9 +32,9 @@ class calculator
     }
 }
 
-$calculator = new calculator();
+$calculator = new Сalculator();
 
 echo $calculator->sum(1)->sum(2)->product(3)->division(3)->getResult();
 echo $calculator->sum(3)->sum(3)->minus(3)->division(3)->getResult();
-echo $calculator->sum(1.4)->sum(2.6)->product(4)->getResult();
+echo $calculator->sum(1)->sum(2)->product(4)->getResult();
 echo $calculator->sum(1)->sum(2)->product(3)->division(0)->getResult();
