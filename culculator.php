@@ -22,7 +22,7 @@ class calculator
     {
         $this->result /= $d;
         if ($d == 0) {
-            $this == 0;
+            $this->result == 0;
         }
         return $this;
     }
