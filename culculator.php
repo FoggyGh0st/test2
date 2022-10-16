@@ -20,7 +20,7 @@ class Calculator
     }
     public function division(float $division): self
     {
-        if ($division == 0.0) {
+        if ($division !== 0.0) {
             $this->result /= $division;
         } else {
             $this->result = 0.0;
