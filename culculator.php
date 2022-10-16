@@ -2,31 +2,31 @@
 
 class Сalculator
 {
-    public $result;
-    public function sum(int $sum)
+    public int $result;
+    public function sum(int $sum_): self
     {
-        $this->result += $sum;
+        $this->result += $sum_;
         return $this;
     }
-    public function minus(int $minus)
+    public function minus(int $minus_): self
     {
-        $this->result -= $minus;
+        $this->result -= $minus_;
         return $this;
     }
-    public function product(int $product)
+    public function product(int $product_): self
     {
-        $this->result *= $product;
+        $this->result *= $product_;
         return $this;
     }
-    public function division(int $division)
+    public function division(int $division_): self
     {
-        $this->result /= $division;
-        if ($division == 0) {
+        $this->result /= $division_;
+        if ($division_ == 0) {
             $this->result == 0;
         }
         return $this;
     }
-    public function getResult()
+    public function getResult():string
     {
         return $this->result;
     }
