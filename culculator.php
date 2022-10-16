@@ -1,6 +1,6 @@
 <?php
 
-class Сalculator
+class Calculator
 {
     private float $result = 0.0;
     public function sum(float $sum): self
@@ -20,9 +20,10 @@ class Сalculator
     }
     public function division(float $division): self
     {
-        $this->result /= $division;
         if ($division == 0.0) {
-            $this->result == 0.0;
+            $this->result /= $division;
+        } else {
+            $this->result = 0.0;
         }
         return $this;
     }
@@ -32,7 +33,7 @@ class Сalculator
     }
 }
 
-$calculator = new Сalculator();
+$calculator = new Calculator();
 
 echo $calculator->sum(1)->sum(2)->product(3)->division(3)->getResult();
 echo $calculator->sum(3)->sum(3)->minus(3)->division(3)->getResult();
